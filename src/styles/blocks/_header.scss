@@ -1,11 +1,10 @@
 .header {
+  padding: 26px 0;
   background-color: $color-dark;
 }
 
 .header_inner {
-  max-width: 1278px;
-  margin: 0 auto;
-  border: 1px solid red;
+  @include inner;
 }
 
 .header_row {
@@ -15,10 +14,18 @@
 }
 
 .header_logo {
+  font-family: $font-title;
+  font-size: 42px;
+  font-weight: 300;
+  line-height: 49px;
   background-color: $color-dark;
   color: $color-light;
+  text-decoration: none;
 }
 
 .header_phone {
+  font-size: 24px;
+  line-height: 33px;
   color: $color-light;
+  text-decoration: none;
 }

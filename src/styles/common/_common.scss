@@ -8,3 +8,8 @@ body {
   font-family: $font;
   color: $color-dark;
 }
+
+img {
+  max-width: 100%;
+  display: block;
+}

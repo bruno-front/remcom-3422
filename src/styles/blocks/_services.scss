@@ -1,0 +1,12 @@
+.services {
+  padding: 100px 0;
+  background-color: $color-light;
+}
+
+.services_inner {
+  @include inner;
+}
+
+.services_title {
+  @include section-title;
+}
