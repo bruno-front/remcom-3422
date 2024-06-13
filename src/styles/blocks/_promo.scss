@@ -32,6 +32,36 @@
   }
 }
 
+.promo_btn {
+  margin-top: 70px;
+}
+
 .promo_visual {
   width: calc(50% - $gap-column / 2);
+}
+
+.promo_fig {
+  background-color: gray;
+  position: relative;
+}
+
+.promo_caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px;
+  color: #fff;
+  background-color: rgba($color-dark, .5);
+}
+
+.btn-play {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  margin: auto;
 }

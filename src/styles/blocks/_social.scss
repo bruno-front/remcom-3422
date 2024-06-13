@@ -1,0 +1,18 @@
+.social {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.social_item {
+  list-style: none;
+}
+
+.social_link {
+  display: block;
+  width: 26px;
+  height: 26px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}

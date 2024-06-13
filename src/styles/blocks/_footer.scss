@@ -1,0 +1,21 @@
+.footer {
+  padding: 30px 0;
+  background-color: $color-dark;
+}
+
+.footer_inner {
+  @include inner();
+}
+
+.footer_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.copyright {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  color: $color-light;
+}
