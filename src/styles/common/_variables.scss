@@ -11,3 +11,11 @@ $color-accent: #D46240;
 $gap-column: 30px;
 
 // breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$desktop: 1280px;
+
+$mobile-max: $tablet - 1px;
+$tablet-max: $desktop - 1px;
+
+

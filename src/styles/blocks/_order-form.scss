@@ -2,7 +2,6 @@
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
-  margin-top: 70px;
 }
 
 .order-form_field {
@@ -11,6 +10,10 @@
 
 .order-form_field-half {
   width: calc(50% - 15px);
+
+  @media (max-width: $mobile-max) {
+    width: 100%;
+  }
 }
 
 .order-form_label {
@@ -25,18 +28,40 @@
   width: 100%;
   padding: 20px;
   margin-top: 5px;
-  color: $color-dark;
   font-size: 20px;
   line-height: 27px;
+  color: $color-dark;
   background-color: $color-light;
-  border: none;
   border-radius: 8px;
+  border: none;
 }
 
 .order-form_textarea {
   height: 167px;
   font-family: $font;
   resize: none;
+}
+
+.order-form_checkbox-text {
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  line-height: 27px;
+
+  &:before {
+    content: '';
+    flex-shrink: 0;
+    display: block;
+    width: 32px;
+    height: 32px;
+    border: 2px solid $color-accent;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  a {
+    color: $color-accent;
+  }
 }
 
 .order-form_checkbox {
@@ -47,27 +72,5 @@
       background-color: $color-accent;
       box-shadow: inset 0 0 0 2px $color-light;
     }
-  }
-}
-
-.order-form_checkbox-text {
-  display: flex;
-  gap: 10px;
-  font-size: 20px;
-  font-weight: 400;
-  line-height: 27px;
-
-  &:before {
-    content: '';
-    flex-shrink: 0;
-    display: block;
-    width: 32px;
-    height: 32px;
-    border-radius: 4px;
-    border: 2px solid $color-accent;
-  }
-
-  a {
-    color: $color-accent;
   }
 }

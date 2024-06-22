@@ -1,4 +1,8 @@
 .main-nav {
+  @media (max-width: $tablet-max) {
+    display: none;
+  }
+
   ul {
     display: flex;
     gap: 30px;

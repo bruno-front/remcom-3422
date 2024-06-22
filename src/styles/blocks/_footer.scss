@@ -11,6 +11,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: $mobile-max) {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
 }
 
 .copyright {

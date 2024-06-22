@@ -1,6 +1,14 @@
 .order {
   padding: 100px 0 90px;
   background-color: rgba($color-light, .2);
+
+  @media (max-width: $tablet-max) {
+    padding: 70px 0;
+  }
+
+  @media (max-width: $mobile-max) {
+    padding: 50px 0;
+  }
 }
 
 .order_inner {
@@ -9,4 +17,13 @@
 
 .order_title {
   @include section-title;
+  margin-bottom: 70px;
+
+  @media (max-width: $tablet-max) {
+    margin-bottom: 60px;
+  }
+
+  @media (max-width: $mobile-max) {
+    margin-bottom: 30px;
+  }
 }

@@ -1,6 +1,15 @@
 .promo {
   padding: 136px 0;
   background-color: rgba($color-light, .2);
+
+  @media (max-width: $tablet-max) {
+    padding: 90px 0;
+  }
+
+  @media (max-width: $mobile-max) {
+    padding: 60px 0;
+    text-align: center;
+  }
 }
 
 .promo_inner {
@@ -10,10 +19,18 @@
 .promo_row {
   display: flex;
   gap: $gap-column;
+
+  @media (max-width: $mobile-max) {
+    display: block;
+  }
 }
 
 .promo_desc {
-  width: calc(50% - $gap-column / 2);
+  flex-basis: calc(50% - $gap-column / 2);
+
+  @media (max-width: $mobile-max) {
+    margin-bottom: 40px;
+  }
 }
 
 .promo_title {
@@ -22,6 +39,16 @@
   line-height: 44px;
   color: $color-accent;
 
+  @media (max-width: $tablet-max) {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  @media (max-width: $mobile-max) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
   span {
     display: block;
     margin-bottom: 20px;
@@ -29,15 +56,43 @@
     font-size: 116px;
     font-weight: 300;
     line-height: 136px;
+
+    @media (max-width: $tablet-max) {
+      font-size: 64px;
+      line-height: 75px;
+    }
+
+    @media (max-width: $mobile-max) {
+      margin-bottom: 10px;
+      font-size: 54px;
+      line-height: 63px;
+    }
   }
 }
 
 .promo_btn {
   margin-top: 70px;
+
+  @media (max-width: $tablet-max) {
+    margin-top: 40px;
+  }
+
+  @media (max-width: $mobile-max) {
+    display: none;
+  }
+}
+
+.promo_btn-visual {
+  display: none;
+
+  @media (max-width: $mobile-max) {
+    display: block;
+    margin-top: 50px;
+  }
 }
 
 .promo_visual {
-  width: calc(50% - $gap-column / 2);
+  flex-basis: calc(50% - $gap-column / 2);
 }
 
 .promo_fig {
