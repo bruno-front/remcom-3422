@@ -1,0 +1,7 @@
+.contact-card {
+  display: none;
+
+  &.active {
+    display: block;
+  }
+}
