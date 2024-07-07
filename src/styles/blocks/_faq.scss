@@ -10,3 +10,10 @@
 .faq_title {
   @include section-title();
 }
+
+.faq_accordions {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin-top: 100px;
+}
