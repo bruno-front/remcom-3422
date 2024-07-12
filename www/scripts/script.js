@@ -57,16 +57,59 @@ $(document).ready(function() {
   });
 
 
+  $('.js-filter-link').on('click', function(event) {
+    event.preventDefault();
+
+    $('.js-filter-link').removeClass('active');
+    $(this).addClass('active');
+
+    let dataFilter = $(this).data('filter');
+
+    if (dataFilter === 'all') {
+      $('.js-works-list > li').show();
+      return;
+    }
+
+    $('.js-works-list > li').each(function() {
+      let dataType = $(this).data('type');
+
+      if (dataFilter === dataType) {
+        $(this).show();
+        return;
+      }
+
+      $(this).hide();
+    });
+  });
+
+
+  $('.js-slider').slick({
+    // autoplay: true,
+    autoplaySpeed: 1000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true
+  });
 
 
 
+  $('.js-reviews-btn').on('click', function() {
 
+    $.ajax({
+      type: 'POST',
+      url: '../jsons/reviews.json',
+      data: {
+        count: 2
+      },
+      success: function(res) {
+        console.log(res);
+      },
+      error: function(err) {
+        console.log('Error: ', err);
+      }
+    });
 
-
-
-
-
-
+  });
 
 
 

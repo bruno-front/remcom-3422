@@ -10,6 +10,10 @@
 
 .order-form_field-half {
   width: calc(50% - 15px);
+
+  @media (max-width: $mobile-max) {
+    width: 100%;
+  }
 }
 
 .order-form_label {

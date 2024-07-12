@@ -4,6 +4,10 @@
 @import "common/_mixins";
 @import "common/_common";
 
+
+@import "plugins/slick";
+
+
 // blocks
 @import "blocks/_header";
 @import "blocks/_main-nav";
@@ -20,3 +24,5 @@
 @import "blocks/_contacts";
 @import "blocks/_contact-card";
 @import "blocks/_reviews";
+@import "blocks/_works";
+@import "blocks/_gallery";

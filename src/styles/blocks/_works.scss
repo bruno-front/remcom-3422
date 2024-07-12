@@ -1,0 +1,28 @@
+.works {
+  padding: 140px 0 130px;
+  background-color: rgba($color-light, .2);
+}
+
+.works_inner {
+  @include inner;
+}
+
+.works_title {
+  @include section-title;
+  margin-bottom: 100px;
+}
+
+.works_list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.works_item {
+  width: calc(25% - 30px * 3 / 4);
+  padding: 20px;
+  border: 1px solid rgba($color-accent, .1);
+  background-color: #fff;
+  border-radius: 10px;
+  list-style: none;
+}
