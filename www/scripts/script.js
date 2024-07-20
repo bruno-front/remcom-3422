@@ -60,9 +60,6 @@ $(document).ready(function() {
   $('.js-filter-link').on('click', function(event) {
     event.preventDefault();
 
-    $('.js-filter-link').removeClass('active');
-    $(this).addClass('active');
-
     let dataFilter = $(this).data('filter');
 
     if (dataFilter === 'all') {
@@ -94,6 +91,7 @@ $(document).ready(function() {
 
 
   $('.js-reviews-btn').on('click', function() {
+    $(this).addClass('loading');
 
     $.ajax({
       type: 'POST',
@@ -102,22 +100,38 @@ $(document).ready(function() {
         count: 2
       },
       success: function(res) {
-        console.log(res);
+        const reviewsHtml = createReviewsHtml(res.reviews);
+        addToPageHtml(reviewsHtml);
+        $('.js-reviews-btn').removeClass('loading');
       },
       error: function(err) {
         console.log('Error: ', err);
+        $('.js-reviews-btn').removeClass('loading');
       }
     });
 
   });
 
+  function createReviewsHtml(dataArray) {
+    let htmlString = '';
 
+    dataArray.forEach(function(dataItem) {
+      htmlString = htmlString + `<div class="reviews-item">
+            <img src="${dataItem.avaUrl}" alt="${dataItem.avaAlt}" class="reviews-ava">
+            <div class="reviews-text">
+              <strong class="reviews-name">${dataItem.name}</strong>
+              <blockquote class="reviews-quote">
+                “${dataItem.text}”
+              </blockquote>
+            </div>
+          </div>`;
+    });
 
+    return htmlString;
+  }
 
-
-
-
-
-
+  function addToPageHtml(html) {
+    $('.js-reviews-wrap').append(html);
+  }
 
 });

@@ -34,6 +34,7 @@
     line-height: 33px;
     color: $color-light;
     text-decoration: none;
+    transition: color .3s;
 
     &:hover {
       color: $color-accent;
